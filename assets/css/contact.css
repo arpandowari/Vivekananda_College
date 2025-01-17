@@ -1,0 +1,152 @@
+.c-div-image {
+    width: 100%;
+    height: 21rem;
+    box-sizing: border-box;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    position: relative;
+}
+
+.c-div-image img {
+    width: 100%;
+    box-sizing: border-box;
+    object-fit: fill;
+    filter: blur(0.08rem) brightness(80%);
+}
+
+.ctitle-div {
+    position: absolute;
+    display: flex;
+    font-size: 70px;
+    left: 50px;
+    top: 80px;
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 1);
+    font: bolder 70px arial, sans-serif;
+    width: 100%;
+}
+
+.space-div {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.r1-title {
+    font-size: 41px;
+    font-weight: 800;
+}
+
+.facebook {
+    color: blue;
+    font-size: 140px!important;
+    /* background-color: aliceblue; */
+    /* margin-right: 60%;
+    margin-left: 30%; */
+}
+
+.instragram {
+    color: rgb(212, 0, 255);
+    font-size: 140px!important;
+    /* background-color: aliceblue; */
+    /* margin-left: 130%; */
+}
+
+.you {
+    color: rgb(255, 0, 0);
+    font-size: 140px!important;
+    /* background-color: aliceblue; */
+    /* margin-left: 160%; */
+}
+
+.c-color-blu {
+    color: rgb(0, 27, 181);
+    font-size: 80px;
+    text-decoration: underline;
+    text-shadow: 2px 2px 3px rgb(136, 136, 136, 0.5);
+}
+
+.contact-main-div {
+    display: flex;
+    margin-bottom: 2rem;
+}
+
+.con-row-1 {
+    width: 60%;
+    float: left;
+    padding: 2rem;
+}
+
+.con-row-2 {
+    width: 32rem;
+    background-color: rgba(10, 124, 255, 0);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem 2em 2rem 2rem;
+    margin-top: 1rem;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    border-radius: 10%;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 95%;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    box-shadow: rgba(50, 50, 93, 0.11) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.119) 0px 18px 36px -18px inset;
+}
+
+.error {
+    color: red;
+    display: none;
+}
+
+.btn-div {
+    display: flex;
+    justify-content: center;
+}
+
+.btn {
+    padding: 13px 15px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    width: 200px;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 5px;
+    box-shadow: rgba(62, 62, 116, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+.btn:hover {
+    background-color: #0b64c4;
+}
+
+.c-loation-div {
+    font-size: 20px;
+    margin-top: 20px;
+    font-weight: 800;
+}
+
+.c-loation-div a {
+    text-decoration: none;
+    color: black;
+}
+
+.c-map-div {
+    margin-top: 2rem;
+}

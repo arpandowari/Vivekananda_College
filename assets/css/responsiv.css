@@ -1,0 +1,111 @@
+/* 
+@media (min-width: 900px) {
+  .navbar-expand-lg .navbar-toggler {
+      display: none;
+  }
+} */
+
+@media screen and (max-width:800px) {
+    .top_card {
+       font-size: 8px;
+    }
+.clip-design-2,.clip-design{
+    height: 0.7rem;
+}
+.owl-stage{
+    position: relative;
+}
+    .owl-dots{
+      position:absolute;
+      bottom: 0;
+      right: 110px;
+    }
+   
+    .owl-theme .owl-dots .owl-dot span {
+      height: 0.30rem!important;
+    }
+    .card > img{
+      height:250px;
+      width: 100%;
+      }
+    .owl-next span,.owl-prev span{
+      font-size: 1rem!important;
+      color: #fff;
+      margin-bottom: 1px!important;
+    }
+     .owl-next{
+      width: 20px;
+      right: -0.5;
+    }
+    .owl-prev{
+      width: 20px;
+      left: -0.5;
+    }
+
+    .satarmaindiv{
+      box-sizing: border-box;
+    width: 5rem;
+  }
+    .logo-top {
+      height: 60px;
+      width: 60px;
+    }
+    .logo-top-div {
+      height:1rem ;
+      width:4rem!important;
+    }
+    .logo_text{
+      position: relative;
+    }
+    .collage-name-eng {
+      font-size: 1rem;
+    }
+    .logo_text {
+      margin-top: 0px;
+    }
+    .collage-name-ben {
+      font-size: 1rem;
+    }
+    .star {
+      width: 40px;
+      height: 40px;
+      font-size: 5px;
+      font-size: 0.3rem;
+      font-weight:700 ;
+      margin-top: 0.6rem;
+    }
+    .apply-btn{
+      padding: 0;
+      height: 1rem;
+      width: 2.2rem;
+      font-size: 0.4rem;
+      margin-top: 0!important;
+    }
+  
+    
+    .icon-box{
+     display: none;
+    }
+
+    .res-detail{
+      display: contents;
+     position:absolute;
+     bottom:-12px;
+     left: 0;
+     display: block;
+    }
+    .margin-auto{
+      margin: auto;
+    }
+    .res-text{
+font-size: 20px!important;
+    }
+    .mis-image {width: 20rem!important;
+    }
+
+
+    .pare-slider-container{
+      max-width: 200px;
+      max-height: 150px;
+    }
+}

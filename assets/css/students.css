@@ -1,0 +1,224 @@
+@media screen and (max-width:980px) {
+    .s-div-information p {
+        padding: 0rem 0rem;
+    }
+    .title2-div {
+        border-bottom: 3px solid rgb(17, 74, 196);
+        height: 100%;
+        width: 12rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.s-div-title {
+    display: flex;
+    justify-content: center;
+    font-size: 3rem;
+    font-weight: 700;
+    padding: 1rem;
+    text-decoration: underline;
+}
+
+.s-main-photo-div {
+    display: flex;
+    padding: 0 2rem;
+}
+
+.s-photo-div {
+    width: 500px;
+    box-sizing: border-box;
+    justify-content: center;
+}
+
+.s-stu-img {
+    width: 800px;
+}
+
+.s-div-information p {
+    font-size: 1.4rem;
+    padding: 0.5rem 0.5rem;
+    text-align: justify;
+}
+
+.s-div-information ul {
+    margin-left: 60px;
+    font-size: 1.2rem;
+    text-align: justify;
+    margin-top: 1rem;
+}
+
+.place-title {
+    display: flex;
+    justify-content: center;
+    font-size: 2.5rem;
+    color: #000000;
+    font-weight: 600;
+}
+
+.clip-1 {
+    clip-path: polygon(100% 0, 60% 35%, 100% 46%, 61% 65%, 100% 98%, 57% 100%, 0 100%, 0 55%, 0 0, 44% 0);
+    background-color: rgb(0, 110, 255);
+    height: 3rem;
+    width: 45%;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+.title-div-plac {
+    background-color: rgba(128, 203, 236, 0.256);
+    width: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+    display: flex;
+    margin-top: 1rem;
+}
+
+.clip-2 {
+    clip-path: polygon(0 0, 50% 0, 100% 0, 100% 67%, 100% 99%, 58% 100%, 0 100%, 41% 68%, 0 49%, 35% 29%);
+    background-color: rgb(0, 110, 255);
+    height: 3rem;
+    width: 45%;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+.main-card {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(127, 210, 255, 0.201);
+    height: 75%;
+    width: 100%;
+    /* padding: 10px; */
+    margin-top: 0.1rem;
+    padding: 1rem;
+}
+
+.card2 {
+    height: 100%;
+    width: 33.33%;
+    border-top: 1px solid rgb(17, 41, 196);
+    padding: 20px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    margin: 0 1rem;
+    transition: all 0.3s ease;
+}
+
+.card3 {
+    height: 100%;
+    width: 33.33%;
+    padding: 20px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    transition: all 0.3s ease;
+}
+
+.imagemain-div-2 {
+    height: 170px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.image-2 {
+    height: 170px;
+    width: 170px;
+    background-color: rgb(255, 255, 255);
+    overflow: hidden;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid rgb(17, 74, 196);
+}
+
+.avtar-2 {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.card3:hover {
+    transform: scale(1.04);
+}
+
+.card2:hover {
+    transform: scale(1.04);
+}
+
+.main-name-2 {
+    height: 8%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.border-2 {
+    height: 170px;
+    width: 170px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.lebel-2 {
+    background-color: rgb(17, 74, 196);
+    height: 1.5rem;
+    width: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.name2 {
+    color: #fff;
+    font-weight: 520;
+}
+
+.title-main-2 {
+    height: 7%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.title2-div {
+    border-bottom: 3px solid rgb(17, 74, 196);
+    height: 100%;
+    width: 11.95rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title-2 {
+    color: #000000;
+    font-weight: 700;
+    font-size: 17px;
+}
+
+.about-div-main-2 {
+    height: 20%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-2 {
+    text-align: center;
+    font-size: 13px;
+    color: #000000;
+}

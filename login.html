@@ -1,0 +1,86 @@
+<!-- <!DOCTYPE html> -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <title>Vivekananda_College/contact</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/login.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="assets/font_awesome/css/font-awesome.min.css">
+    <title>LOG IN</title>
+</head>
+
+<body>
+    <section class="sec">
+
+        <div class="main-card" data-aos="fade-up">
+            <div class="button-box">
+                <div id="btn"></div>
+                <button type="button" onclick="login()" class="log-in-btn1">Log In</button>
+                <button type="button" onclick="register()" class="log-in-btn">Sign Up</button>
+            </div>
+
+            <form action="index.html" id="login">
+                <div class="from-div" data-aos="fade-up">
+                    <input type="text" id="phone1" pattern="[789][0-9]{9}" placeholder="Mobile Number....." class="log-input" required>
+                    <input type="text" id="password1" placeholder="Passsword...." class="log-input" required>
+                </div>
+                <div class="div-check">
+                    <input type="checkbox" class="chrckbox">
+                    <span>Remember My Passsword</span>
+                </div>
+                <button type="submit" class="submit-btn" onclick="return Regcheck1();">Log In</button>
+                <div class="label-div">
+                    <label class="label">----------------Log In With----------------</label>
+                </div>
+
+                <div class="social">
+                    <a href="https://accounts.google.co.in/"><i class="fa fa-facebook-square icon" aria-hidden="true"></i></i></a>
+                    <a href="https://www.facebook.com/"><i class="fa fa-google icon"  aria-hidden="true"></i></a>
+                </div>
+
+            </form>
+
+            <form action="index.html" id="register">
+                <div class="from-div">
+                    <input type="text" name="" id="uname" class="log-input" placeholder="Enter Name...">
+                    <input type="number" id="phone" pattern="[789]-[0-9]{9}" placeholder="Mobile Number....." class="log-input" required>
+                    <input type="email" id="uemail" placeholder="Enter Email......" class="log-input" required>
+                    <input type="text" id="password" placeholder="Passsword...." class="log-input" required>
+                    <input type="text" id="cpassword" placeholder="Reenter Passsword...." class="log-input" required>
+                </div>
+                <div class="div-check">
+                    <input type="checkbox" class="chrckbox" id="chrckbox" required>
+                    <span>Remember me............</span>
+                </div>
+                <input type="submit" class="submit-btn" onclick="return Regcheck();" value="Sign Up">
+                <div class="label-div">
+                    <label class="label">----------------Sign Up With----------------</label>
+                </div>
+
+                <div class="social">
+                    <a href="https://accounts.google.co.in/"><i class="fa fa-google icon" aria-hidden="true"></i></i></a>
+                    <a href="https://www.facebook.com/"><i class="fa fa-facebook-square icon" aria-hidden="true"></i></a>
+
+                </div>
+
+            </form>
+
+
+        </div>
+
+    </section>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js "></script>
+    <script>
+        AOS.init({
+            offset: 130,
+            duration: 1000,
+        });
+    </script>
+    <script src="assets/js/login.js"></script>
+</body>
+
+</html>

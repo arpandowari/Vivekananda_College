@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+<!-- Our Story -->
+<section class="story">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center mb-5">
+          <h2 class="section-title">Our Departments</h2>
+          <p class="section-subtitle">Explore the diverse departments of our institution</p>
+        </div>
+      </div>
+      <div class="row">
+        <!-- Department of Bengali -->
+        <div class="col-md-4 mb-4">
+          <div class="card h-100">
+            <img src="assets/images/dpt_bng.jpg" class="card-img-top" alt="Department of Bengali">
+            <div class="card-body">
+              <h5 class="card-title">The Department of Bengali</h5>
+              <p class="card-text">Dive into the rich cultural and literary heritage of Bengal through our comprehensive Bengali courses.</p>
+              <button class="btn btn-info" onclick="toggleInfo(this)">More About</button>
+              <div class="more-info" style="display: none;">
+                <p>The Department of Bengali focuses on linguistic, cultural, and literary studies, celebrating the rich history and heritage of Bengal.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Department of English -->
+        <div class="col-md-4 mb-4">
+          <div class="card h-100">
+            <img src="images/department_english.jpg" class="card-img-top" alt="Department of English">
+            <div class="card-body">
+              <h5 class="card-title">The Department of English</h5>
+              <p class="card-text">Explore English literature, language, and linguistics in a global context.</p>
+              <button class="btn btn-info" onclick="toggleInfo(this)">More About</button>
+              <div class="more-info" style="display: none;">
+                <p>The English Department offers courses in literary analysis, creative writing, and critical theory, preparing students for a globalized world.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Department of Sanskrit -->
+        <div class="col-md-4 mb-4">
+          <div class="card h-100">
+            <img src="images/department_sanskrit.jpg" class="card-img-top" alt="Department of Sanskrit">
+            <div class="card-body">
+              <h5 class="card-title">The Department of Sanskrit</h5>
+              <p class="card-text">Uncover the ancient wisdom and classical texts of Sanskrit studies.</p>
+              <button class="btn btn-info" onclick="toggleInfo(this)">More About</button>
+              <div class="more-info" style="display: none;">
+                <p>Our Sanskrit Department delves into ancient texts, philosophy, and grammar, fostering an appreciation of India's classical heritage.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Add similar toggle structures for the other departments -->
+    </div>
+  </section>
+  
+  <script>
+    function toggleInfo(button) {
+      const moreInfo = button.nextElementSibling;
+      if (moreInfo.style.display === "none") {
+        moreInfo.style.display = "block";
+        button.textContent = "Less About";
+      } else {
+        moreInfo.style.display = "none";
+        button.textContent = "More About";
+      }
+    }
+  </script>
+  
+    
+</body>
+</html>
