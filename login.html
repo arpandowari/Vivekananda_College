@@ -1,38 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vivekananda College - Log In / Sign Up</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <style>
         body {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://via.placeholder.com/800');
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('assets/images/photo-1.jpg');
             background-position: center;
             background-size: cover;
             background-repeat: no-repeat;
         }
 
         .main-card {
-            max-width: 400px;
+            width: 400px;
             margin: auto;
             padding: 20px;
             background: #fff;
             border-radius: 20px;
-            box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+            position: relative;
+            text-align: center;
         }
 
         .button-box {
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
+            gap: 20px;
             margin-bottom: 20px;
+        }
+
+        .button-box button {
+            transition: all 0.3s ease-in-out;
         }
 
         .log-input {
             margin-top: 10px;
+            border: 1px solid rgb(87, 110, 225);
+            border-radius: 20px;
+            padding: 10px;
+            width: 100%;
         }
 
         .submit-btn {
@@ -43,6 +52,13 @@
             border-radius: 30px;
             font-size: 18px;
             font-weight: 700;
+            margin-top: 1rem;
+            transition: all 1s ease-in-out;
+            color: #fff;
+        }
+
+        .submit-btn:hover {
+            background: blue;
         }
 
         .social {
@@ -54,7 +70,12 @@
 
         .icon {
             color: blue;
-            margin-left: 20px;
+            margin: 0 15px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .icon:hover {
+            transform: scale(1.2);
         }
 
         .label-div {
@@ -62,61 +83,97 @@
             color: #959494;
             margin: 20px 0;
         }
+
+        /* Form Transition */
+        .form-container {
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+            height:30rem; /* Adjust for form height */
+        }
+
+        .form {
+            width: 100%;
+            position: absolute;
+            top: 0;
+            transition: all 0.6s ease-in-out;
+            opacity: 0;
+            transform: translateX(100%);
+        }
+
+        #loginForm {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .active-login #loginForm {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .active-login #registerForm {
+            opacity: 0;
+            transform: translateX(100%);
+        }
+
+        .active-register #loginForm {
+            opacity: 0;
+            transform: translateX(-100%);
+        }
+
+        .active-register #registerForm {
+            opacity: 1;
+            transform: translateX(0);
+        }
     </style>
 </head>
-
 <body>
     <div class="container d-flex align-items-center vh-100">
-        <div class="main-card" data-aos="fade-up">
+        <div class="main-card">
             <div class="button-box">
                 <button type="button" id="loginBtn" class="btn btn-primary" onclick="showLogin()">Log In</button>
                 <button type="button" id="registerBtn" class="btn btn-secondary" onclick="showRegister()">Sign Up</button>
             </div>
 
-            <form id="loginForm" class="form" onsubmit="return validateLogin();">
-                <h4 class="text-center">Log In</h4>
-                <input type="text" id="phone1" class="form-control log-input" placeholder="Mobile Number" required>
-                <input type="password" id="password1" class="form-control log-input" placeholder="Password" required>
-                <div class="form-check">
-                    <input type="checkbox" class="form-check-input" id="rememberMe">
-                    <label class="form-check-label" for="rememberMe">Remember My Password</label>
-                </div>
-                <button type="submit" class="submit-btn">Log In</button>
-                <div class="label-div">---------------- Log In With ----------------</div>
-                <div class="social">
-                    <a href="https://accounts.google.co.in/"><i class="fa fa-google icon" aria-hidden="true"></i></a>
-                    <a href="https://www.facebook.com/"><i class="fa fa-facebook-square icon" aria-hidden="true"></i></a>
-                </div>
-            </form>
+            <div class="form-container">
+                <form id="loginForm" class="form active-login">
+                    <h4 class="fw-bold">Log In</h4>
+                    <input type="text" id="phone1" class="log-input" placeholder="Mobile Number" required>
+                    <input type="password" id="password1" class="log-input" placeholder="Password" required>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="rememberMe">
+                        <label class="form-check-label" for="rememberMe">Remember Me</label>
+                    </div>
+                    <button type="submit" class="submit-btn">Log In</button>
+                    <div class="label-div">---------------- Log In With ----------------</div>
+                    <div class="social">
+                        <a href="#"><i class="fa fa-google icon"></i></a>
+                        <a href="#"><i class="fa fa-facebook-square icon"></i></a>
+                    </div>
+                </form>
 
-            <form id="registerForm" class="form" style="display: none;" onsubmit="return validateRegister();">
-                <h4 class="text-center">Sign Up</h4>
-                <input type="text" id="uname" class="form-control log-input" placeholder="Enter Name" required>
-                <input type="text" id="phone" class="form-control log-input" placeholder="Mobile Number" required>
-                <input type="email" id="uemail" class="form-control log-input" placeholder="Enter Email" required>
-                <input type="password" id="password" class="form-control log-input" placeholder="Password" required>
-                <input type="password" id="cpassword" class="form-control log-input" placeholder="Re-enter Password" required>
-                <button type="submit" class="submit-btn">Sign Up</button>
-                <div class="label-div">---------------- Sign Up With ----------------</div>
-                <div class="social">
-                    <a href="https://accounts.google.co.in/"><i class="fa fa-google icon" aria-hidden="true"></i></a>
-                    <a href="https://www.facebook.com/"><i class="fa fa-facebook-square icon" aria-hidden="true"></i></a>
-                </div>
-            </form>
+                <form id="registerForm" class="form">
+                    <h4 class="fw-bold">Sign Up</h4>
+                    <input type="text" id="uname" class="log-input" placeholder="Enter Name" required>
+                    <input type="text" id="phone" class="log-input" placeholder="Mobile Number" required>
+                    <input type="email" id="uemail" class="log-input" placeholder="Enter Email" required>
+                    <input type="password" id="password" class="log-input" placeholder="Password" required>
+                    <input type="password" id="cpassword" class="log-input" placeholder="Re-enter Password" required>
+                    <button type="submit" class="submit-btn">Sign Up</button>
+                    <div class="label-div">---------------- Sign Up With ----------------</div>
+                    <div class="social">
+                        <a href="#"><i class="fa fa-google icon"></i></a>
+                        <a href="#"><i class="fa fa-facebook-square icon"></i></a>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        AOS.init({
-            offset: 130,
-            duration: 1000,
-        });
-
         function showLogin() {
-            document.getElementById("loginForm").style.display = "block";
-            document.getElementById("registerForm").style.display = "none";
+            document.querySelector(".form-container").classList.add("active-login");
+            document.querySelector(".form-container").classList.remove("active-register");
             document.getElementById("loginBtn").classList.add("btn-primary");
             document.getElementById("loginBtn").classList.remove("btn-secondary");
             document.getElementById("registerBtn").classList.add("btn-secondary");
@@ -124,63 +181,15 @@
         }
 
         function showRegister() {
-            document.getElementById("loginForm").style.display = "none";
-            document.getElementById("registerForm").style.display = "block";
+            document.querySelector(".form-container").classList.add("active-register");
+            document.querySelector(".form-container").classList.remove("active-login");
             document.getElementById("registerBtn").classList.add("btn-primary");
             document.getElementById("registerBtn").classList.remove("btn-secondary");
             document.getElementById("loginBtn").classList.add("btn-secondary");
             document.getElementById("loginBtn").classList.remove("btn-primary");
         }
-
-        function validateLogin() {
-            const phone = document.getElementById('phone1').value;
-            const password = document.getElementById('password1').value;
-            const phonePattern = /^[6-9]{1}[0-9]{9}$/;
-
-            if (!phonePattern.test(phone)) {
-                alert("Enter a valid phone number.");
-                return false;
-            }
-            if (password === '') {
-                alert("Please enter your password.");
-                return false;
-            }
-            alert("Login successful!");
-            return true;
-        }
-
-        function validateRegister() {
-            const uname = document.getElementById('uname').value;
-            const phone = document.getElementById('phone').value;
-            const email = document.getElementById('uemail').value;
-            const password = document.getElementById('password').value;
-            const cpassword = document.getElementById('cpassword').value;
-            const phonePattern = /^[6-9]{1}[0-9]{9}$/;
-
-            if (uname === '') {
-                alert("Please enter your name.");
-                return false;
-            }
-            if (!phonePattern.test(phone)) {
-                alert("Enter a valid phone number.");
-                return false;
-            }
-            if (email === '') {
-                alert("Please enter your email.");
-                return false;
-            }
-            if (password === '') {
-                alert("Please enter your password.");
-                return false;
-            }
-            if (password !== cpassword) {
-                alert("Passwords do not match.");
-                return false;
-            }
-            alert("Registration successful!");
-            return true;
-        }
     </script>
-</body>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>
