@@ -480,3 +480,90 @@ background-color: #0a0268!important;
 .slide-footer .no .owl-dots{
   display: none;
 }
+.sec {
+  height: 100vh;
+  width: 100vw;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/photo-2.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.main-card {
+  width: 380px;
+  padding: 20px;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.button-box {
+  width: 100%;
+  margin: 35px auto;
+  position: relative;
+  box-shadow: 0 0 20px 9px #2428ff1f;
+  border-radius: 30px;
+}
+
+.log-in-btn, .log-in-btn1 {
+  padding: 10px 0;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  outline: none;
+  position: relative;
+}
+
+#btn {
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(to right, rgb(96, 210, 255), rgb(30, 30, 232));
+  border-radius: 30px;
+  transition: .5s;
+}
+
+.log-input {
+  padding: 15px;
+  height: 40px;
+  margin-top: 20px;
+  border-radius: 18px;
+  border: 1px solid blue;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 10px 0;
+  cursor: pointer;
+  background: linear-gradient(to right, rgb(96, 210, 255), rgb(30, 30, 232));
+  border: 0;
+  border-radius: 30px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.social {
+  display: flex;
+  justify-content: center;
+  font-size: 30px;
+  margin-top: 20px;
+}
+
+.icon {
+  color: blue;
+  margin-left: 20px;
+}
+
+.label-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #959494;
+  margin-top: 20px;
+  font-size: 14px;
+}

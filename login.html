@@ -1,86 +1,186 @@
-<!-- <!DOCTYPE html> -->
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
-    <title>Vivekananda_College/contact</title>
-    <link rel="stylesheet" type="text/css" href="assets/css/login.css" />
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vivekananda College - Log In / Sign Up</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="assets/font_awesome/css/font-awesome.min.css">
-    <title>LOG IN</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://via.placeholder.com/800');
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .main-card {
+            max-width: 400px;
+            margin: auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 20px;
+            box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px;
+        }
+
+        .button-box {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .log-input {
+            margin-top: 10px;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 10px;
+            background: linear-gradient(to right, rgb(96, 210, 255), rgb(30, 30, 232));
+            border: none;
+            border-radius: 30px;
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        .social {
+            display: flex;
+            justify-content: center;
+            font-size: 30px;
+            margin-top: 20px;
+        }
+
+        .icon {
+            color: blue;
+            margin-left: 20px;
+        }
+
+        .label-div {
+            text-align: center;
+            color: #959494;
+            margin: 20px 0;
+        }
+    </style>
 </head>
 
 <body>
-    <section class="sec">
-
+    <div class="container d-flex align-items-center vh-100">
         <div class="main-card" data-aos="fade-up">
             <div class="button-box">
-                <div id="btn"></div>
-                <button type="button" onclick="login()" class="log-in-btn1">Log In</button>
-                <button type="button" onclick="register()" class="log-in-btn">Sign Up</button>
+                <button type="button" id="loginBtn" class="btn btn-primary" onclick="showLogin()">Log In</button>
+                <button type="button" id="registerBtn" class="btn btn-secondary" onclick="showRegister()">Sign Up</button>
             </div>
 
-            <form action="index.html" id="login">
-                <div class="from-div" data-aos="fade-up">
-                    <input type="text" id="phone1" pattern="[789][0-9]{9}" placeholder="Mobile Number....." class="log-input" required>
-                    <input type="text" id="password1" placeholder="Passsword...." class="log-input" required>
+            <form id="loginForm" class="form" onsubmit="return validateLogin();">
+                <h4 class="text-center">Log In</h4>
+                <input type="text" id="phone1" class="form-control log-input" placeholder="Mobile Number" required>
+                <input type="password" id="password1" class="form-control log-input" placeholder="Password" required>
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="rememberMe">
+                    <label class="form-check-label" for="rememberMe">Remember My Password</label>
                 </div>
-                <div class="div-check">
-                    <input type="checkbox" class="chrckbox">
-                    <span>Remember My Passsword</span>
-                </div>
-                <button type="submit" class="submit-btn" onclick="return Regcheck1();">Log In</button>
-                <div class="label-div">
-                    <label class="label">----------------Log In With----------------</label>
-                </div>
-
+                <button type="submit" class="submit-btn">Log In</button>
+                <div class="label-div">---------------- Log In With ----------------</div>
                 <div class="social">
-                    <a href="https://accounts.google.co.in/"><i class="fa fa-facebook-square icon" aria-hidden="true"></i></i></a>
-                    <a href="https://www.facebook.com/"><i class="fa fa-google icon"  aria-hidden="true"></i></a>
-                </div>
-
-            </form>
-
-            <form action="index.html" id="register">
-                <div class="from-div">
-                    <input type="text" name="" id="uname" class="log-input" placeholder="Enter Name...">
-                    <input type="number" id="phone" pattern="[789]-[0-9]{9}" placeholder="Mobile Number....." class="log-input" required>
-                    <input type="email" id="uemail" placeholder="Enter Email......" class="log-input" required>
-                    <input type="text" id="password" placeholder="Passsword...." class="log-input" required>
-                    <input type="text" id="cpassword" placeholder="Reenter Passsword...." class="log-input" required>
-                </div>
-                <div class="div-check">
-                    <input type="checkbox" class="chrckbox" id="chrckbox" required>
-                    <span>Remember me............</span>
-                </div>
-                <input type="submit" class="submit-btn" onclick="return Regcheck();" value="Sign Up">
-                <div class="label-div">
-                    <label class="label">----------------Sign Up With----------------</label>
-                </div>
-
-                <div class="social">
-                    <a href="https://accounts.google.co.in/"><i class="fa fa-google icon" aria-hidden="true"></i></i></a>
+                    <a href="https://accounts.google.co.in/"><i class="fa fa-google icon" aria-hidden="true"></i></a>
                     <a href="https://www.facebook.com/"><i class="fa fa-facebook-square icon" aria-hidden="true"></i></a>
-
                 </div>
-
             </form>
 
-
+            <form id="registerForm" class="form" style="display: none;" onsubmit="return validateRegister();">
+                <h4 class="text-center">Sign Up</h4>
+                <input type="text" id="uname" class="form-control log-input" placeholder="Enter Name" required>
+                <input type="text" id="phone" class="form-control log-input" placeholder="Mobile Number" required>
+                <input type="email" id="uemail" class="form-control log-input" placeholder="Enter Email" required>
+                <input type="password" id="password" class="form-control log-input" placeholder="Password" required>
+                <input type="password" id="cpassword" class="form-control log-input" placeholder="Re-enter Password" required>
+                <button type="submit" class="submit-btn">Sign Up</button>
+                <div class="label-div">---------------- Sign Up With ----------------</div>
+                <div class="social">
+                    <a href="https://accounts.google.co.in/"><i class="fa fa-google icon" aria-hidden="true"></i></a>
+                    <a href="https://www.facebook.com/"><i class="fa fa-facebook-square icon" aria-hidden="true"></i></a>
+                </div>
+            </form>
         </div>
+    </div>
 
-    </section>
-
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js "></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init({
             offset: 130,
             duration: 1000,
         });
+
+        function showLogin() {
+            document.getElementById("loginForm").style.display = "block";
+            document.getElementById("registerForm").style.display = "none";
+            document.getElementById("loginBtn").classList.add("btn-primary");
+            document.getElementById("loginBtn").classList.remove("btn-secondary");
+            document.getElementById("registerBtn").classList.add("btn-secondary");
+            document.getElementById("registerBtn").classList.remove("btn-primary");
+        }
+
+        function showRegister() {
+            document.getElementById("loginForm").style.display = "none";
+            document.getElementById("registerForm").style.display = "block";
+            document.getElementById("registerBtn").classList.add("btn-primary");
+            document.getElementById("registerBtn").classList.remove("btn-secondary");
+            document.getElementById("loginBtn").classList.add("btn-secondary");
+            document.getElementById("loginBtn").classList.remove("btn-primary");
+        }
+
+        function validateLogin() {
+            const phone = document.getElementById('phone1').value;
+            const password = document.getElementById('password1').value;
+            const phonePattern = /^[6-9]{1}[0-9]{9}$/;
+
+            if (!phonePattern.test(phone)) {
+                alert("Enter a valid phone number.");
+                return false;
+            }
+            if (password === '') {
+                alert("Please enter your password.");
+                return false;
+            }
+            alert("Login successful!");
+            return true;
+        }
+
+        function validateRegister() {
+            const uname = document.getElementById('uname').value;
+            const phone = document.getElementById('phone').value;
+            const email = document.getElementById('uemail').value;
+            const password = document.getElementById('password').value;
+            const cpassword = document.getElementById('cpassword').value;
+            const phonePattern = /^[6-9]{1}[0-9]{9}$/;
+
+            if (uname === '') {
+                alert("Please enter your name.");
+                return false;
+            }
+            if (!phonePattern.test(phone)) {
+                alert("Enter a valid phone number.");
+                return false;
+            }
+            if (email === '') {
+                alert("Please enter your email.");
+                return false;
+            }
+            if (password === '') {
+                alert("Please enter your password.");
+                return false;
+            }
+            if (password !== cpassword) {
+                alert("Passwords do not match.");
+                return false;
+            }
+            alert("Registration successful!");
+            return true;
+        }
     </script>
-    <script src="assets/js/login.js"></script>
 </body>
 
 </html>
