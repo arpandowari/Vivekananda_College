@@ -3,81 +3,532 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="assets/bootstrap-5.3.3/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/font_awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
+    <link rel="stylesheet" type="text/css" href="assets/css/style1.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/responsiv.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/fancybox.css" />
+    <title>Vivekananda_College</title>
+    <style>
+      .gallery-item a img{
+    max-height: 550px;
+    margin-top:1rem;
+    height: 320px;
+    border: solid 2px #9b9b9b;
+    width: 500px!important;
+    transition: all 0.5s;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    
+}
+.gallery-item a img:hover{
+  transform: scale(1.01);
+  border: 2px solid rgb(11, 11, 11);
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+body {
+            background-color: #f8f9fa;
+            font-family: 'Arial', sans-serif;
+        }
+        .section-title {
+            font-size: 2.5rem;
+          
+            color: #007bff;
+        }
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: #6c757d;
+            
+        }
+        .card-container {
+            perspective: 1000px;
+            margin-bottom: 45px; /* Added margin for spacing */
+        }
+        .card {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            transform-style: preserve-3d;
+            transition: transform 0.6s;
+            cursor: pointer;
+            border: 1px solid #dee2e6;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            
+        }
+        .card:hover {
+            transform: translate(-0px,-80px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        .card:hover #card_text {
+            opacity: 1;
+            background-color: #fff;
+        }
+        #card_text {
+            font-size: 20px;
+        }
+
+        .c_title{
+            
+            color: #007bff;
+            font-weight: 900;
+            font-size: 2.5rem;
+        }
+        .card .card-front, .card .card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: 10px;
+        }
+        .card-front {
+            background: #ffffff; 
+            text-align: center;
+            padding: 20px;
+        }
+        .card-front img {
+            width: 90%; /* Adjusted size */
+            height: auto;
+            border-radius: 10px;
+        }
+        .card-back {
+            background: #007bff;
+            color: #fff;
+            transform: rotateY(180deg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .c_details{
+            text-align: justify;
+        }
+        .card-back p {
+            font-size: 18px;
+            font-weight: bold;
+        }
+        #card_text{
+            opacity: 0;
+            transition: all 1s;
+        }
+        .department-details {
+            display: none;
+            padding: 40px;
+            text-align: center;
+            background: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+            opacity: 0; /* Start hidden */
+            transition: opacity 0.5s ease-in-out; /* Fade-in effect */
+        }
+        .department-details.show {
+            display: block; /* Show when class is added */
+            opacity: 1; /* Fade in */
+        }
+        .department-details img {
+            width: 30%;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        @media (max-width: 768px) {
+            .card {
+                height: 95px;
+                width: 160px;
+                padding: 0;
+                margin: 0;
+            }
+            .department-details img {
+                width: 80%;
+            }
+            .card-front {
+                padding: 0;
+            }
+            .card-front img {
+            width: 100%; /* Adjusted size */
+            height: 100%;
+          
+        }  
+        .card-container {
+            margin-bottom: 0;
+        }
+        .card{
+            pointer-events: none;
+        }
+        
+    }
+
+
+    </style>
 </head>
 <body>
-    
+  
+<!-- nav -->
 
-<!-- Our Story -->
-<section class="story">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12 text-center mb-5">
-          <h2 class="section-title">Our Departments</h2>
-          <p class="section-subtitle">Explore the diverse departments of our institution</p>
+<section>
+    <div class="top_card">
+      <div class="clip-design-2">
+      </div>
+      <div class="iso-top1">
+        <a class="iso-style">CERTE 14001 || ISO CERTIFICATE 50001 || ISO CERTIFICATE 900</a>
+      </div>
+      <div class="clip-design">
+        <a href="https://www.facebook.com/VivekanandaCollege.page/"><i class="fa-brands fa-facebook face"></i></a>
+        <a href="https://www.instagram.com/explore/locations/635963162/vivekananda-college-thakurpukur/"><i
+            class="fa-brands fa-instagram ins"></i></a>
+      </div>
+    </div>
+
+    <div class="top-logo-section">
+      <div class="top-div">
+        <div class="top-div">
+          <div class="logo-top-div">
+            <img class="logo-top" src="assets/images/logo.png">
+          </div>
+          <div class="logo_text">
+            <span class="collage-name-eng">VIVEKANANDA COLLEGE</span>
+            <p class="collage-name-ben">বিবেকানন্দ কলেজ </p>
+            <span class="res-detail">
+              <i class="far fa-envelope" style="font-size: 4px;"></i>
+              <a href="mailto:vivekanandacollege63@gmail.com">
+                <span style="font-size:5px">vivekanandacollege63@gmail.com</span></a> <i class="fas fa-home"
+                style="font-size:5px"></i>
+              <span style="font-size:4px">269,Diamond Harbour Road,Thakurpukur Kolkata -700063</span>
+            </span>
+          </div>
+        </div>
+        <div class="container text-center satarmaindiv ">
+          <div class="star mx-auto myshadow">
+            Admission <br> Open
+          </div>
+          <a href="#" class="btn btn-primary mt-1 p-1 apply-btn myshadow">Apply Now</a>
+        </div>
+        <div>
+          <div class="icon-box">
+            <i class="far fa-envelope"></i>
+            <strong style="font-size:12px">Email</strong>
+            <a href="mailto:vivekanandacollege63@gmail.com">
+              <span style="font-size:12px">vivekanandacollege63@gmail.com</span>
+              <span style="font-size:11px">&nbsp;&nbsp;</span>
+            </a>
+            <p>
+              <i class="fas fa-phone"></i>
+              <strong style="font-size:12px">Call/Whatsapp</strong>
+              <span style="font-size:12px">6290857280</span> <span
+                style="font-size:11px">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            </p>
+            <i class="fas fa-home"></i>
+            <strong style="font-size:12px">Address</strong>
+            <span style="font-size:12px">269,Diamond Harbour Road, Thakurpukur Kolkata -700063</span> <span
+              style="font-size:11px">&nbsp;&nbsp;</span>
+          </div>
         </div>
       </div>
-      <div class="row">
-        <!-- Department of Bengali -->
-        <div class="col-md-4 mb-4">
-          <div class="card h-100">
-            <img src="assets/images/dpt_bng.jpg" class="card-img-top" alt="Department of Bengali">
-            <div class="card-body">
-              <h5 class="card-title">The Department of Bengali</h5>
-              <p class="card-text">Dive into the rich cultural and literary heritage of Bengal through our comprehensive Bengali courses.</p>
-              <button class="btn btn-info" onclick="toggleInfo(this)">More About</button>
-              <div class="more-info" style="display: none;">
-                <p>The Department of Bengali focuses on linguistic, cultural, and literary studies, celebrating the rich history and heritage of Bengal.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- Department of English -->
-        <div class="col-md-4 mb-4">
-          <div class="card h-100">
-            <img src="images/department_english.jpg" class="card-img-top" alt="Department of English">
-            <div class="card-body">
-              <h5 class="card-title">The Department of English</h5>
-              <p class="card-text">Explore English literature, language, and linguistics in a global context.</p>
-              <button class="btn btn-info" onclick="toggleInfo(this)">More About</button>
-              <div class="more-info" style="display: none;">
-                <p>The English Department offers courses in literary analysis, creative writing, and critical theory, preparing students for a globalized world.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- Department of Sanskrit -->
-        <div class="col-md-4 mb-4">
-          <div class="card h-100">
-            <img src="images/department_sanskrit.jpg" class="card-img-top" alt="Department of Sanskrit">
-            <div class="card-body">
-              <h5 class="card-title">The Department of Sanskrit</h5>
-              <p class="card-text">Uncover the ancient wisdom and classical texts of Sanskrit studies.</p>
-              <button class="btn btn-info" onclick="toggleInfo(this)">More About</button>
-              <div class="more-info" style="display: none;">
-                <p>Our Sanskrit Department delves into ancient texts, philosophy, and grammar, fostering an appreciation of India's classical heritage.</p>
-              </div>
-            </div>
-          </div>
-        </div>
+      <div>
       </div>
-      <!-- Add similar toggle structures for the other departments -->
+
+    </div>
+
+
+  </section>
+
+  <section class="position-sticky fixed-top sticky-top w-100 p-0 ">
+    <div class="nav_div fw-bold w-100">
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg navbar-dark bg-primary myshadow">
+        <div class=" container-fluid">
+          <!-- Logo or College Name -->
+          <img class="top-logo " src="assets/images/logo.png">
+          <a class="navbar-brand fw-bold " href="#">Vivekananda College</a>
+
+          <!-- Hamburger icon for mobile view -->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+
+          <!-- Navbar Links -->
+          <div class="collapse navbar-collapse " id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active1" href="courses.html">Courses</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about1.html">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="academics1.html">Faculty</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="students.html">Student Portal</a>
+              </li>
+              <li class="nav-item "><a class="nav-link" href="gallery.html">Gallary</a></li>
+              <!-- Dropdown Menu for additional functions -->
+              <li class="nav-item dropdown z-3">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  Resources
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="library.html">Library</a></li>
+                  <li><a class="dropdown-item" href="login.html">Events</a></li>
+                  <li><a class="dropdown-item" href="admission.html">Admission</a></li>
+                  <li><a class="dropdown-item" href="contact.html">Support</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="#">
+                  <div class="call-button"> <i class="fa fa-phone ph none-deco" aria-hidden="true"></i></div>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
     </div>
   </section>
-  
-  <script>
-    function toggleInfo(button) {
-      const moreInfo = button.nextElementSibling;
-      if (moreInfo.style.display === "none") {
-        moreInfo.style.display = "block";
-        button.textContent = "Less About";
-      } else {
-        moreInfo.style.display = "none";
-        button.textContent = "More About";
-      }
-    }
-  </script>
-  
-    
+
+
+  <section class="story pb-5 pt-4" id="departments">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center ">
+                <h2 class="section-title">Our Departments</h2>
+                <p class="section-subtitle">Explore the diverse departments of our institution</p>
+            </div>
+        </div>
+        <div class="row justify-content-center" id="department-list">
+            
+            <script>
+                const departments = [
+                    { img: "assets/images/dpt_bng.jpg", name: "Bengali", desc: "Bengali Language & Literature", details: "The Department of Bengali offers an in-depth study of the Bengali language, literature, and cultural heritage, fostering a deep appreciation for one of the richest literary traditions in the world. Students engage with both classical and modern texts, enhancing their linguistic proficiency and literary analytical skills.The curriculum covers poetry, prose, and drama, allowing students to explore works from medieval to contemporary periods. Through the study of renowned poets, novelists, and playwrights, students gain insights into Bengal’s social, historical, and cultural evolution. This program prepares students for careers in education, research, publishing, media, and cultural preservation." },
+
+                    { img: "assets/images/dpt_his.jpg", name: "History", desc: "History & Culture", details: "The History Department provides a comprehensive study of past events, emphasizing historical events, cultural heritage, and critical analysis of historical texts. Students examine significant moments in history, tracing their causes, consequences, and relevance to contemporary society.The curriculum covers diverse historical periods and themes, including ancient civilizations, medieval societies, modern revolutions, and global conflicts. Through the study of primary sources, historical interpretations, and research methodologies, students develop analytical and critical thinking skills. History fosters a deeper understanding of societal development and prepares students for careers in education, research, archival work, journalism, and public administration." },
+
+                    { img: "assets/images/dpt_cs.jpg", name: "Computer Science", desc: "Computer Science & AI", details: "The Computer Science Department offers a robust program covering programming languages, algorithms, and data structures. The curriculum focuses on practical applications in AI and cybersecurity, preparing students for a rapidly evolving tech landscape. Specializations include Artificial Intelligence, Cybersecurity, and Software Development. Students will engage in hands-on projects and internships, gaining real-world experience and building a strong foundation for their careers." },
+
+                    { img: "assets/images/dpt_geo.jpg", name: "Geography", desc: "Physical & Human Geography", details: "The Geography Department explores the physical and human aspects of the Earth's surface, focusing on physical landscapes, climate patterns, and human-environment interactions. Students study how natural forces shape the planet and how human activities influence and are influenced by their surroundings.The curriculum includes Physical Geography, which examines landforms, weather systems, and ecosystems; Human Geography, which explores population dynamics, urban development, and cultural landscapes; and Geographic Information Systems (GIS), which integrates technology for spatial analysis and mapping. Through fieldwork and digital tools, students develop analytical skills applicable to urban planning, environmental management, and disaster response." },
+
+                    { img: "assets/images/dpt_ps.jpg", name: "Political Science", desc: "Government & Political Systems", details: "The Political Science Department examines the principles and systems that shape political institutions and global affairs, focusing on political theories, governance structures, and international relations. Students analyze how governments function, how policies are formed, and how political ideologies influence societies.The curriculum covers Democracy, exploring electoral systems, civic participation, and policy-making; Authoritarianism, studying centralized power, state control, and political stability; and International Relations, which examines diplomacy, global conflicts, and international organizations. Through research, debates, and case studies, students develop critical thinking and analytical skills, preparing for careers in government, law, international affairs, and public policy." },
+
+                    { img: "assets/images/dpt_phi.jpg", name: "Philosophy", desc: "Philosophical Theories", details: "The Philosophy Department explores fundamental questions about existence, morality, and knowledge through courses in Ethics, Logic, and Metaphysics. Ethics examines moral principles, justice, and human responsibility, helping students navigate real-world dilemmas. Logic enhances reasoning skills by analyzing arguments and identifying fallacies, essential for structured thinking. Metaphysics delves into reality, identity, and consciousness, engaging students in debates about free will and existence. By studying philosophy, students develop critical thinking, problem-solving, and communication skills, preparing them for careers in law, politics, business, and academia. More than an academic subject, philosophy fosters intellectual curiosity and a deeper understanding of life." },
+
+                    { img: "assets/images/dpt_statis.jpg", name: "Sociology",desc: "Statistics Department", details: "The Statistics Department focuses on the collection, analysis, interpretation, and presentation of data, providing essential tools for making informed decisions across various fields. Students learn how to use statistical methods to identify patterns, make predictions, and solve real-world problems in business, science, healthcare, and social research.The curriculum covers probability theory, data analysis, inferential statistics, and machine learning, equipping students with the skills to handle large datasets and extract meaningful insights. Through practical applications and software-based analysis, students gain hands-on experience in statistical modeling and hypothesis testing. Statistics plays a vital role in research, economics, and technology, preparing students for careers in data science, finance, and policy analysis." },
+
+                    { img: "assets/images/dpt_jmass.jpg", name: "Journalism & Mass Communication", desc: "Media & Communication Studies", details: "The Journalism & Mass Communication Department equips students with the skills and knowledge needed to navigate the dynamic world of media. The curriculum covers essential areas such as news writing, multimedia reporting, and ethics in media, preparing students for careers in journalism, broadcasting, digital media, and public relations.Through news writing, students learn to craft clear, engaging, and fact-based reports, honing their ability to communicate effectively. Multimedia reporting integrates traditional journalism with digital platforms, including video production, social media, and data-driven storytelling. Ethics in media ensures students understand journalistic responsibility, truthfulness, and the impact of media on society." },
+
+                    { img: "assets/images/dpt_chem.jpg", name: "Chemistry", desc: "Chemical Sciences & Research", details: "The Chemistry Department explores the fundamental principles of matter, focusing on molecular compositions, chemical reactions, and laboratory experiments. Students learn about the structure and behavior of atoms and molecules, studying how substances interact and transform through chemical processes.The curriculum covers organic, inorganic, physical, and analytical chemistry, providing both theoretical knowledge and hands-on laboratory experience. Through experiments, students develop essential skills in chemical analysis, synthesis, and research methodologies. Chemistry plays a crucial role in fields like medicine, environmental science, and engineering, making it a versatile discipline that prepares students for careers in research, pharmaceuticals, and industrial chemistry." },
+
+                    { img: "assets/images/dpt_baio.jpg", name: "Biochemistry", desc: "Molecular & Cellular Biology", details: "The Biochemistry Department explores the chemical processes that drive living organisms, focusing on biochemical reactions, genetics, and metabolic pathways. Students study the molecular mechanisms behind cellular functions, enzyme activity, DNA replication, and energy production.The curriculum integrates biology and chemistry, offering insights into how biomolecules like proteins, nucleic acids, and lipids interact to sustain life. Through laboratory research, students gain hands-on experience in techniques such as genetic analysis, protein purification, and metabolic profiling. Biochemistry is essential in medicine, biotechnology, and pharmaceuticals, preparing students for careers in research, healthcare, and drug development." },
+
+                    { img: "assets/images/dpt_bot.jpg", name: "Botany", desc: "Plant Science & Ecology", details: "The Botany Department explores the scientific study of plants, focusing on plant species, genetics, and ecosystem interactions. Students learn about plant structure, growth, reproduction, and classification, gaining insights into biodiversity and conservation.The curriculum covers plant physiology, genetics, and ecology, examining how plants adapt to their environments and contribute to ecosystems. Research and laboratory work include genetic studies, plant breeding, and environmental impact assessments. With applications in agriculture, medicine, and environmental science, botany prepares students for careers in research, forestry, conservation, and biotechnology, contributing to sustainability and the understanding of plant life." },
+
+                    { img: "assets/images/dpt_zoo.jpg", name: "Zoology", desc: "Animal Science & Biodiversity", details: "The Zoology Department explores the scientific study of animals, focusing on animal behavior, physiology, and conservation. Students examine how animals interact with their environments, their biological functions, and the impact of human activities on wildlife.The curriculum covers anatomy, genetics, ecology, and evolutionary biology, providing insights into species diversity and adaptation. Through laboratory research and field studies, students gain hands-on experience in animal observation, habitat assessment, and conservation strategies. Zoology plays a vital role in wildlife preservation, veterinary science, and environmental management, preparing students for careers in research, animal care, and ecological conservation efforts." },
+
+                    { img: "assets/images/dpt_statis.jpg", name: "Statistics", desc: "Data Analysis & Probability", details: "The Statistics Department explores the principles of data collection, analysis, and interpretation, focusing on statistical methods, probability, and data analysis. Students learn how to apply mathematical techniques to analyze patterns, make predictions, and solve real-world problems in fields such as economics, healthcare, and technology.The curriculum covers probability theory, inferential statistics, and computational data analysis, providing a strong foundation in quantitative reasoning. Through practical applications and statistical software, students gain hands-on experience in modeling, hypothesis testing, and decision-making. Statistics plays a crucial role in research, business analytics, and artificial intelligence, preparing students for careers in data science, finance, and policy analysis." },
+
+                    { img: "assets/images/dpt_hr.jpg", name: "Human Rights", desc: "Law & Social Justice", details: "The Human Rights Department explores the principles and frameworks that protect individual freedoms and dignity, focusing on human rights laws, ethics, and global justice issues. Students examine the legal, social, and political aspects of human rights, analyzing how they are upheld and challenged worldwide.The curriculum covers international human rights treaties, ethical theories, and case studies on social justice, equality, and humanitarian efforts. Through research and advocacy training, students gain practical skills in policy analysis, conflict resolution, and legal reform. Human rights studies prepare students for careers in law, international organizations, activism, and public policy, promoting justice and social change." }
+
+                ];
+                
+                function showDetails(index) {
+                    document.getElementById('departments').style.display = 'none';
+                    const details = document.getElementById('department-details');
+                    details.innerHTML = `
+                        <h2 class="c_title">${departments[index].name}</h2>
+ 
+                        <img src="${departments[index].img}" alt="${departments[index].name}">
+                        <p class="c_details">${departments[index].details}</p>
+                        <button onclick="goBack()" class="btn btn-primary">Back to Departments</button>
+                    `;
+                    details.style.opacity = 0; // Start with opacity 0
+                    details.style.display = 'block'; // Show the details
+                    setTimeout(() => {
+                        details.style.opacity = 1; // Fade in effect
+                    }, 10);
+                }
+                
+                function goBack() {
+                    document.getElementById('departments').style.display = 'block';
+                    const details = document.getElementById('department-details');
+                    details.style.opacity = 0; // Fade out effect
+                    setTimeout(() => {
+                        details.style.display = 'none'; // Hide after transition
+                    }, 500); // Match the duration of the fade-in
+                }
+                
+                document.write(departments.map((dept, index) => `
+    <div class="col-md-3 col-6 mb-4"> 
+        <div class="card-container" onclick="showDetails(${index})">
+            <div class="card">
+                <div class="card-front">
+                    <img src="${dept.img}" alt="${dept.name}">
+                    <p id="card_text">${dept.desc}</p>
+                </div>
+                <div class="card-back">
+                    <p>Click to explore</p>
+                </div>
+            </div>
+        </div>
+    </div>
+`).join(""));
+
+            </script>
+        </div>
+    </div>
+</section>
+
+<section class="department-details" id="department-details"></section>
+
+
+<div class="w-100 mt-4">
+  <!-- Footer -->
+  <footer
+          class="text-center text-lg-start w-100 container-fluid z-3"
+          style="background-color: rgba(0, 13, 96, 0.818);">
+    <div class="container p-4 pb-0">
+      <!-- Section: Links -->
+      <section class="">
+        <!--Grid row-->
+        <div class="row">
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-3 col-xl-3 mt-3">
+            <div class="d-flex"> 
+            <div class="w-25 ">
+              <img class="w-100 " src="assets/images/logo.png ">
+          </div>
+          <div class="">
+              <p class="fw-bold mt-2 mb-0"  style="color: rgb(0, 110, 255);">VIVEKANANDA COLLEGE</p>
+              <span class="text-white-50 fw-bold">বিবেকানন্দ কলেজ</span>
+          </div>
+        </div>
+            <p class="text-white fw-bold">
+              The Objective of the College, advancement of learning, strongly manifests the spirit of Education for Empowerment.
+            </p>
+          </div>
+          <!-- Grid column -->
+          <hr class="w-100 clearfix d-md-none"/>
+          <!-- Grid column -->
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-2 text-white">
+            <h5 class="text-uppercase mb-4 font-weight-bold text-white">COMMITTEES</h5>
+            <p>
+              <i class="fa fa-arrow-circle-right " aria-hidden="true "></i>
+              <a class="text-white-50">Governing Body</a>
+            </p>
+            <p>
+              <i class="fa fa-arrow-circle-right " aria-hidden="true "></i>
+              <a class="text-white-50">Building SubCommittee</a>
+            </p>
+            <p>
+              <i class="fa fa-arrow-circle-right " aria-hidden="true "></i>
+              <a class="text-white-50"> Finance SubCommittee</a>
+            </p>
+            <p>
+              <i class="fa fa-arrow-circle-right " aria-hidden="true "></i>
+              <a class="text-white-50">AcademicCommittee</a>
+            </p>
+          </div>
+          <!-- Grid column -->
+
+          <hr class="w-100 clearfix d-md-none" />
+
+          <!-- Grid column -->
+          <hr class="w-100 clearfix d-md-none" />
+
+          <!-- Grid column -->
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3 text-white-50">
+            <h3 class="text-uppercase mb-4 font-weight-bold text-white">Contact</h5>
+            <p><i class="fas fa-home mr-3 text-danger"></i> 269, Diamond Harbour Road, Thakurpukur Kolkata-700063</p>
+            <p><i class="fas fa-envelope mr-3 text-white text-bg-danger"></i> vivekanandacollege63@gmail.com</p>
+            <p><i class="fas fa-phone mr-3 text-success"></i> 6290857280</p>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+            <h6 class="text-uppercase mb-4 font-weight-bold">Follow us</h6>
+
+            <!-- Facebook -->
+            <a
+               class="btn btn-primary btn-floating m-1"
+               style="background-color: #3b5998"
+               href="#!"
+               role="button"
+               ><i class="fab fa-facebook-f"></i
+              ></a>
+
+            <!-- Twitter -->
+            <a
+               class="btn btn-primary btn-floating m-1"
+               style="background-color: #55acee"
+               href="#!"
+               role="button"
+               ><i class="fab fa-twitter"></i
+              ></a>
+
+            <!-- Google -->
+            <a
+               class="btn btn-primary btn-floating m-1"
+               style="background-color: #dd4b39"
+               href="#!"
+               role="button"
+               ><i class="fab fa-google"></i
+              ></a>
+
+            <!-- Instagram -->
+            <a
+               class="btn btn-primary btn-floating m-1"
+               style="background-color: #ac2bac"
+               href="#!"
+               role="button"
+               ><i class="fab fa-instagram"></i
+              ></a>
+
+            <!-- Linkedin -->
+            <a
+               class="btn btn-primary btn-floating m-1"
+               style="background-color: #0082ca"
+               href="#!"
+               role="button"
+               ><i class="fab fa-linkedin-in"></i
+              ></a>
+            <!-- Github -->
+            <a
+               class="btn btn-primary btn-floating m-1"
+               style="background-color: #333333"
+               href="#!"
+               role="button"
+               ><i class="fab fa-github"></i
+              ></a>
+          </div>
+        </div>
+        <!--Grid row-->
+      </section>
+      <!-- Section: Links -->
+    </div>
+    <!-- Grid container -->
+
+    <!-- Copyright -->
+    <div
+         class="text-center p-3 text-white"
+         style="background-color: rgba(0, 0, 0, 0.3)"
+         >
+      © 2024 Copyright: Arpanx  
+  </footer>
+  <!-- Footer -->
+</div>
+<!-- End of .container -->
+
+  <script type="text/javascript" src="assets/bootstrap-5.3.3/js/bootstrap.bundle.min.js"></script>
+  <script type="text/javascript" src="assets/bootstrap-5.3.3/js/jquery-3.7.1.min.js"></script>
+  <script type="text/javascript" src="assets/js/fancybox.umd.js"></script>
 </body>
 </html>
