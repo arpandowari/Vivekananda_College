@@ -19,6 +19,7 @@
 </head>
 
 <body>
+  <div id="loder"></div>
   <section>
     <div class="top_card">
       <div class="clip-design-2">
@@ -132,6 +133,7 @@
                   <li><a class="dropdown-item" href="contact.html">Support</a></li>
                 </ul>
               </li>
+              <li class="nav-item "><a class="nav-link" href="login.html">LogIn</a></li>
               <li class="nav-item">
                 <a class="nav-link active" href="#">
                   <div class="call-button"> <i class="fa fa-phone ph none-deco" aria-hidden="true"></i></div>
@@ -283,7 +285,6 @@
         <h3 class="text-center  text-white fs-1 fw-bold ">Mission</h3>
       </div>
     </div>
-    
     <div class="row">
       <div class="col-lg-6 col-sm-12 px-5   d-flex justify-content-center">
         <img class="w-100 shadow mis-image border border-primary " src="assets/images/MISS.JPG"
@@ -705,6 +706,12 @@
         but.removeClass('sending').blur();
       }, 4500);
 
+    })
+  </script>
+   <script>
+    var loader=document.getElementById("loder");
+    window.addEventListener("load",function(){
+      loader.style.display="none";
     })
   </script>
 </body>

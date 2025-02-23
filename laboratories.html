@@ -28,12 +28,13 @@
   border: 2px solid rgb(11, 11, 11);
   box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
+
     </style>
 </head>
 <body>
   
 <!-- nav -->
-
+<div id="loder"></div>
 <section>
     <div class="top_card">
       <div class="clip-design-2">
@@ -148,6 +149,7 @@
                   <li><a class="dropdown-item" href="contact.html">Support</a></li>
                 </ul>
               </li>
+              <li class="nav-item "><a class="nav-link" href="login.html">LogIn</a></li>
               <li class="nav-item">
                 <a class="nav-link active" href="#">
                   <div class="call-button"> <i class="fa fa-phone ph none-deco" aria-hidden="true"></i></div>
@@ -392,5 +394,11 @@
   <script type="text/javascript" src="assets/bootstrap-5.3.3/js/bootstrap.bundle.min.js"></script>
   <script type="text/javascript" src="assets/bootstrap-5.3.3/js/jquery-3.7.1.min.js"></script>
   <script type="text/javascript" src="assets/js/fancybox.umd.js"></script>
+  <script>
+    var loader=document.getElementById("loder");
+    window.addEventListener("load",function(){
+      loader.style.display="none";
+    })
+  </script>
 </body>
 </html>

@@ -31,7 +31,7 @@
     </style>
 </head>
 <body>
-  
+  <div id="loder"></div>
 <!-- nav -->
 
 <section>
@@ -134,7 +134,7 @@
               <li class="nav-item">
                 <a class="nav-link" href="students.html">Student Portal</a>
               </li>
-              <li class="nav-item active1"><a class="nav-link" href="gallery.html">Gallary</a></li>
+              <li class="nav-item "><a class="nav-link active1" href="gallery.html">Gallary</a></li>
               <!-- Dropdown Menu for additional functions -->
               <li class="nav-item dropdown z-3">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
@@ -148,6 +148,7 @@
                   <li><a class="dropdown-item" href="contact.html">Support</a></li>
                 </ul>
               </li>
+              <li class="nav-item "><a class="nav-link" href="login.html">LogIn</a></li>
               <li class="nav-item">
                 <a class="nav-link active" href="#">
                   <div class="call-button"> <i class="fa fa-phone ph none-deco" aria-hidden="true"></i></div>
@@ -437,5 +438,11 @@
   <script type="text/javascript" src="assets/bootstrap-5.3.3/js/bootstrap.bundle.min.js"></script>
   <script type="text/javascript" src="assets/bootstrap-5.3.3/js/jquery-3.7.1.min.js"></script>
   <script type="text/javascript" src="assets/js/fancybox.umd.js"></script>
+  <script>
+    var loader=document.getElementById("loder");
+    window.addEventListener("load",function(){
+      loader.style.display="none";
+    })
+  </script>
 </body>
 </html>

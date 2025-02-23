@@ -28,10 +28,18 @@
   border: 2px solid rgb(11, 11, 11);
   box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
+#loder{
+  background : #000 url(assets/images/loder.gif) no-repeat center center;
+  background-size: 10%;
+  z-index: 1000000;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+}
     </style>
 </head>
 <body>
-  
+  <div id="loder"></div>
 <!-- nav -->
 
 <section>
@@ -136,8 +144,8 @@
               </li>
               <li class="nav-item"><a class="nav-link" href="#">Gallary</a></li>
               <!-- Dropdown Menu for additional functions -->
-              <li class="nav-item dropdown active1 z-3">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              <li class="nav-item dropdown  z-3">
+                <a class="nav-link dropdown-toggle active1" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
                   aria-expanded="false">
                   Resources
                 </a>
@@ -148,6 +156,7 @@
                   <li><a class="dropdown-item" href="#">Support</a></li>
                 </ul>
               </li>
+              <li class="nav-item "><a class="nav-link" href="login.html">LogIn</a></li>
               <li class="nav-item">
                 <a class="nav-link active" href="#">
                   <div class="call-button"> <i class="fa fa-phone ph none-deco" aria-hidden="true"></i></div>
@@ -543,5 +552,11 @@
   <script type="text/javascript" src="assets/bootstrap-5.3.3/js/bootstrap.bundle.min.js"></script>
   <script type="text/javascript" src="assets/bootstrap-5.3.3/js/jquery-3.7.1.min.js"></script>
   <script type="text/javascript" src="assets/js/fancybox.umd.js"></script>
+  <script>
+    var loader=document.getElementById("loder");
+    window.addEventListener("load",function(){
+      loader.style.display="none";
+    })
+  </script>
 </body>
 </html>
