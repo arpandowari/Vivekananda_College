@@ -19,7 +19,7 @@
     height: 320px;
     border: solid 2px #9b9b9b;
     width: 500px!important;
-    transition: all 0.8s;
+    transition: all 0.5s;
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
     
 }
@@ -29,132 +29,72 @@
   box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 
-.student-card {
-    width: 320px;
-    margin: auto;
-    transition: all 0.8s ease-in-out;
-}
-
-.card {
-    border-radius: 15px;
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
-    text-align: center;
-    padding: 20px;
-    background: linear-gradient(135deg, #ffffff, #f8f9fa);
-    position: relative;
-    overflow: hidden;
-    transition: all 0.6s ease-in-out;
-    margin-bottom: 20px;
-}
-
-.card:hover {
-    box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.4);
-    transform: scale(1.05);
-}
-
-.card-img-container {
-    display: flex;
-    justify-content: center;
-    margin-top: -60px;
-}
-
-.card-img-top {
-    width: 110px;
-    height: 110px;
-    border-radius: 50%;
-    border: 5px solid white;
-    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.3);
-    transition: transform 0.6s ease-in-out;
-    margin-top: 3rem;
-}
-
-.card:hover .card-img-top {
-    transform: rotate(5deg) scale(1.1);
-}
-
-.card-title {
-    font-size: 20px;
-    font-weight: bold;
-    margin-top: 10px;
-    color: #333;
-}
-
-.card-subtitle {
-    font-size: 14px;
-    color: #6c757d;
-    margin-bottom: 15px;
-    font-style: italic;
-}
-
-.card-text {
-    font-size: 14px;
-    color: #444;
-    padding: 0 15px;
-    line-height: 1.5;
-    position: relative;
-}
-
-.quote {
-    color: #d9534f;
-    font-size: 22px;
-    font-weight: bold;
-}
-
-.card::before {
-    content: "";
-    position: absolute;
-    top: -50px;
-    right: -50px;
-    width: 100px;
-    height: 100px;
-    background: #007bff;
-    border-radius: 50%;
-    opacity: 0.2;
-    transition: all 0.6s ease-in-out;
-
-
-    
-}
-
-.card::after {
-    content: "";
-    position: absolute;
-    bottom: -50px;
-    left: -50px;
-    width: 100px;
-    height: 100px;
-    background: #28a745;
-    border-radius: 50%;
-    opacity: 0.2;
-    transition: all 0.6s ease-in-out;
-
-
-}
-
-.card:hover::before {
-    top: -40px;
-    right: -40px;
-    opacity: 0.3;
-}
-
-.card:hover::after {
-    bottom: -40px;
-    left: -40px;
-    opacity: 0.3;
-}
-#loder{
-  background : #000 url(assets/images/loder.gif) no-repeat center center;
-  background-size: 10%;
-  z-index: 1000000;
-  width: 100%;
-  height: 100vh;
-  position: fixed;
-}
+    body {
+        background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        min-height: 100vh;
+    }
+    .form-container {
+        max-width: 1200px;
+        margin: 2rem auto;
+        padding: 2rem;
+    }
+    .form-card {
+        background: white;
+        border-radius: 15px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        margin-bottom: 1.5rem;
+    }
+    .form-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    }
+    .form-icon {
+        font-size: 2rem;
+        color: #3f51b5;
+        margin-right: 1rem;
+    }
+    .form-title {
+        color: #2c3e50;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+    }
+    .form-description {
+        color: #666;
+        font-size: 0.9rem;
+    }
+    .header {
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+    .header h1 {
+        color: #3f51b5;
+        font-weight: 700;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    }
+    .header p {
+        color: #666;
+        max-width: 600px;
+        margin: 1rem auto;
+    }
+    .btn-primary {
+        background-color: #3f51b5;
+        border: none;
+        padding: 0.5rem 1.5rem;
+        border-radius: 25px;
+        transition: all 0.3s ease;
+        margin-left: auto; /* Align button to the right */
+    }
+    .btn-primary:hover {
+        background-color: #303f9f;
+        transform: translateY(-2px);
+    }
     </style>
 </head>
 <body>
   <div id="loder"></div>
 <!-- nav -->
+
 <section>
     <div class="top_card">
       <div class="clip-design-2">
@@ -253,12 +193,12 @@
                 <a class="nav-link" href="academics1.html">Faculty</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active1" href="students.html">Student Portal</a>
+                <a class="nav-link" href="students.html">Student Portal</a>
               </li>
               <li class="nav-item "><a class="nav-link" href="gallery.html">Gallary</a></li>
               <!-- Dropdown Menu for additional functions -->
               <li class="nav-item dropdown z-3">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                <a class="nav-link dropdown-toggle active1" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
                   aria-expanded="false">
                   Resources
                 </a>
@@ -283,80 +223,139 @@
     </div>
   </section>
 
+</head>
+<body>
 
-  <section class="container my-5">
-    <div class="text-center fw-bolder mb-4">
-        <h1>STUDENTS</h1>
-    </div>
-    <div class="row" id="student-cards">
-        <!-- Student cards will be injected here by JavaScript -->
-    </div>
-</section>
+<div class="form-container">
+<div class="header">
+    <h1>College Forms</h1>
+    <p>Access all important college forms and documents in one place. Click on any form to proceed.</p>
+</div>
 
-<script>
-    // Constant data for 20 students
-    const students = [
-        { name: "Alice Johnson", title: "Computer Science", description: "A dedicated student with a passion for programming.", image: "assets/images/avtar-1.jpg" },
-        { name: "Bob Smith", title: "Information Technology", description: "Enthusiastic about web development and design.", image: "assets/images/avtar-2.jpg" },
-        { name: "Charlie Brown", title: "Software Engineering", description: "Loves coding and building applications.", image: "assets/images/avtar-3.jpg" },
-        { name: "Diana Prince", title: "Data Science", description: "A data enthusiast with a knack for analytics.", image: "assets/images/avtar-1.jpg" },
-        { name: "Ethan Hunt", title: "Cyber Security", description: "Passionate about protecting information systems.", image: "assets/images/avtar-2.jpg" },
-        { name: "Fiona Gallagher", title: "Network Engineering", description: "Enjoys working with network systems and protocols.", image: "assets/images/avtar-3.jpg" },
-        { name: "George Clooney", title: "Artificial Intelligence", description: "Fascinated by machine learning and AI technologies.", image: "assets/images/avtar-1.jpg" },
-        { name: "Hannah Montana", title: "Web Development", description: "A creative mind with a love for front-end design.", image: "assets/images/avtar-2.jpg" },
-        { name: "Ian Malcolm", title: "Game Development", description: "Aspires to create immersive gaming experiences.", image: "assets/images/avtar-3.jpg" },
-        { name: "Julia Roberts", title: "Mobile App Development", description: "Passionate about building mobile applications.", image: "assets/images/avtar-1.jpg" },
-        { name: "Kevin Spacey", title: "Cloud Computing", description: "Interested in cloud technologies and solutions.", image: "assets/images/avtar-2.jpg" },
-        { name: "Laura Croft", title: "Digital Marketing", description: "A marketing enthusiast with a focus on digital strategies.", image: "assets/images/avtar-3.jpg" },
-        { name: "Michael Scott", title: "Project Management", description: "Skilled in managing projects and teams effectively.", image: "assets/images/avtar-1.jpg" },
-        { name: "Nina Simone", title: "Graphic Design", description: "Creative designer with a passion for visual arts.", image: "assets/images/avtar-2.jpg" },
-        { name: "Oscar Isaac", title: "Blockchain Technology", description: "Exploring the potential of blockchain in various industries.", image: "assets/images/avtar-3.jpg" },
-        { name: "Paula Patton", title: "User  Experience Design", description: "Focused on creating user-friendly interfaces.", image: "assets/images/avtar-1.jpg" },
-        { name: "Quentin Tarantino", title: "Film Studies", description: "A film buff with a keen interest in storytelling.", image: "assets/images/avtar-2.jpg" },
-        { name: "Rachel Green", title: "Fashion Design", description: "Aspiring fashion designer with a unique style.", image: "assets/images/avtar-3.jpg" },
-        { name: "Steve Jobs", title: "Entrepreneurship", description: "Innovative thinker with a passion for startups.", image: "assets/images/avtar-1.jpg" },
-        { name: "Tina Fey", title: "Creative Writing", description: "Loves writing stories and scripts.", image: "assets/images/avtar-2.jpg" },
-        { name: "Uma Thurman", title: "Psychology", description: "Interested in understanding human behavior.", image: "assets/images/avtar-3.jpg" },
-        { name: "Vin Diesel", title: "Sports Management", description: "Passionate about sports and team management.", image: "assets/images/avtar-1.jpg" }, { name: "Alice Johnson", title: "Computer Science", description: "A dedicated student with a passion for programming.", image: "assets/images/avtar-1.jpg" },
-        { name: "Bob Smith", title: "Information Technology", description: "Enthusiastic about web development and design.", image: "assets/images/avtar-2.jpg" },
-        { name: "Charlie Brown", title: "Software Engineering", description: "Loves coding and building applications.", image: "assets/images/avtar-3.jpg" },
-        { name: "Diana Prince", title: "Data Science", description: "A data enthusiast with a knack for analytics.", image: "assets/images/avtar-1.jpg" },
-        { name: "Ethan Hunt", title: "Cyber Security", description: "Passionate about protecting information systems.", image: "assets/images/avtar-2.jpg" },
-        { name: "Fiona Gallagher", title: "Network Engineering", description: "Enjoys working with network systems and protocols.", image: "assets/images/avtar-3.jpg" },
-       
-        
-    ];
-
-    function createCard(data) {
-        return `
-            <div class="student-card">
-    <div class="card">
-        <div class="card-img-container">
-            <img src="${data.image}" class="card-img-top" alt="${data.name}">
+<div class="row">
+    <div class="col-md-6">
+        <div class="form-card p-4 d-flex justify-content-between align-items-center">
+            <div class="d-flex align-items-center">
+                <i class="form-icon fas fa-file-alt"></i>
+                <div>
+                    <div class="form-title">Students Exam Grievance Redressal Form</div>
+                    <div class="form-description">Submit your exam-related grievances here</div>
+                </div>
+            </div>
+            <a href="assets/froms/grievance.pdf" class="btn btn-primary">Download</a>
         </div>
-        <div class="card-body">
-            <h5 class="card-title">${data.name}</h5>
-            <h6 class="card-subtitle">${data.title}</h6>
-            <p class="card-text">
-                <span class="quote">“</span> ${data.description} <span class="quote">”</span>
-            </p>
+    </div>
+
+    <div class="col-md-6">
+        <div class="form-card p-4 d-flex justify-content-between align-items-center">
+            <div class="d-flex align-items-center">
+                <i class="form-icon fas fa-hand-holding-heart"></i>
+                <div>
+                    <div class="form-title">Form for nomination to receive the death gratuity</div>
+                    <div class="form-description">Nomination process for death gratuity</div>
+                </div>
+            </div>
+            <a href="assets/froms/Nomine_form_of_Gratuity.pdf" class="btn btn-primary">Download</a>
+        </div>
+    </div>
+
+    <div class="col-md-6">
+        <div class="form-card p-4 d-flex justify-content-between align-items-center">
+            <div class="d-flex align-items-center">
+                <i class="form-icon fas fa-money-bill-wave"></i>
+                <div>
+                    <div class="form-title">FORMAT FOR ALLOTMENT OF FUND FOR CU EXAM</div>
+                    <div class="form-description">Fund allocation process for CU exams</div>
+                </div>
+            </div>
+            <a href="assets/froms/Format_Allotment_of_fund_format_CBCS.pdf" class="btn btn-primary">Download</a>
+        </div>
+    </div>
+
+    <div class="col-md-6">
+        <div class="form-card p-4 d-flex justify-content-between align-items-center">
+            <div class="d-flex align-items-center">
+                <i class="form-icon fas fa-chalkboard-teacher"></i>
+                <div>
+                    <div class="form-title">Statement of Assignment performed by Guest Lecturer/Visiting Faculty</div>
+                    <div class="form-description">Assignment details for guest faculty</div>
+                </div>
+            </div>
+            <a href="assets/froms/ASSIGNMENT_GL_CBCS.pdf" class="btn btn-primary">Download</a>
+        </div>
+    </div>
+
+    <div class="col-md-6">
+        <div class="form-card p-4 d-flex justify-content-between align-items-center">
+            <div class="d-flex align-items-center">
+                <i class="form-icon fas fa-file-invoice"></i>
+                <div>
+                    <div class="form-title">Registration Format</div>
+                    <div class="form-description">Standard Registration form</div>
+                </div>
+            </div>
+            <a href="admission.html" class="btn btn-primary">Apply</a>
+        </div>
+    </div>
+
+    <div class="col-md-6">
+        <div class="form-card p-4 d-flex justify-content-between align-items-center">
+            <div class="d-flex align-items-center">
+                <i class="form-icon fas fa-building"></i>
+                <div>
+                    <div class="form-title">H.R.A. Declaration vide Higher Education Department</div>
+                    <div class="form-description">HRA declaration process</div>
+                </div>
+            </div>
+            <a href="assets/froms/HRA_FORM.pdf" class="btn btn-primary">Download</a>
+        </div>
+    </div>
+
+    <div class="col-md-6">
+        <div class="form-card p-4 d-flex justify-content-between align-items-center">
+            <div class="d-flex align-items-center">
+                <i class="form-icon fas fa-chalkboard"></i>
+                <div>
+                    <div class="form-title">Permission for Organizing Seminar / Workshops</div>
+                    <div class="form-description">Request permission for events</div>
+                </div>
+            </div>
+            <a href="assets/froms/Permission_for_Organizing_Seminar.pdf" class="btn btn-primary">Download</a>
+        </div>
+    </div>
+
+    <div class="col-md-6">
+        <div class="form-card p-4 d-flex justify-content-between align-items-center">
+            <div class="d-flex align-items-center">
+                <i class="form-icon fas fa-wallet"></i>
+                <div>
+                    <div class="form-title">Withdrawal of admissible accumulated sum of money in PF</div>
+                    <div class="form-description">PF withdrawal process</div>
+                </div>
+            </div>
+            <a href="assets/froms/PF_FORM.pdf" class="btn btn-primary">Download</a>
+        </div>
+    </div>
+
+    <div class="col-md-6">
+        <div class="form-card p-4 d-flex justify-content-between align-items-center">
+            <div class="d-flex align-items-center">
+                <i class="form-icon fas fa-file-signature"></i>
+                <div>
+                    <div class="form-title">An application for non-refundable withdrawal from PF</div>
+                    <div class="form-description">Application process for PF withdrawal</div>
+                </div>
+            </div>
+            <a href="assets/froms/Terminal_payment_of_PF.pdf" class="btn btn-primary">Download</a>
         </div>
     </div>
 </div>
+</div>
 
-        `;
-    }
 
-    function renderStudents() {
-        const studentCards = students.map(createCard).join('');
-        document.getElementById('student-cards').innerHTML = studentCards;
-    }
 
-    // Initial render
-    renderStudents();
-</script>
 
-  
+
 
 
 <div class="w-100 mt-4">
