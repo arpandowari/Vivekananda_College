@@ -61,3 +61,7 @@ document.getElementById('contactForm').addEventListener('submit', function(event
         alert('Form submitted successfully!');
     }
 });
+document.addEventListener("contextmenu", function(event) {
+    event.preventDefault();
+    alert("Right-click is disabled on this page!");
+});
